@@ -15,8 +15,8 @@ public class Main {
         player1.accountInfo(); // need to be implemented...
         player2.upgrade();  // need to be implemented...
 
-        GameController gameController = new GameController(player1);
-        gameController.startGame();
+//        GameController gameController = new GameController(player1);
+//        gameController.startGame();
 
     }
 

@@ -9,7 +9,6 @@ public abstract class Player {
     private String name;
     protected int playCount;
 
-
     public Player(String name) {
         this.playCount = 0;
         this.name = name;

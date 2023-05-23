@@ -1,0 +1,1 @@
+The last question was:Game context: You open the door and find a room with two exits. Do you go left (1) or right (2)?.Then I chose A. Base on A, give me one following context and question

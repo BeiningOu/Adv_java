@@ -1,0 +1,45 @@
+//package main;
+//
+//import java.util.ArrayList;
+//import java.util.List;
+//
+//public class DialogueSplit {
+//    private List<String> dialogueList;
+//
+//    public DialogueSplit(String conversation) {
+//        dialogueList = new ArrayList<>();
+//        splitDialogues(conversation);
+//    }
+//
+//    private void splitDialogues(String conversation) {
+//        // Removing the "\n" and double quotation marks
+//        String cleanedConversation = conversation.replace("\\n", "").replace("\"", "");
+//        String[] dialogues = cleanedConversation.split("Person \\d: ");
+//
+//    }
+//
+//    public static void main(String[] args) {
+//        String conversation = "\\nPerson 1: \"Hey, did you hear the news?\" \\nPerson 2: \"No, what happened?\"";
+//
+//
+//
+//
+//        // Splitting the cleaned conversation into separate dialogues
+//        String[] dialogues = cleanedConversation.split("Person \\d: ");
+//
+//        // Creating a list to store the dialogues
+//        List<String> dialogueList = new ArrayList<>();
+//
+//        // Adding the dialogues to the list
+//        for (String dialogue : dialogues) {
+//            if (!dialogue.isEmpty()) {
+//                dialogueList.add(dialogue.trim());
+//            }
+//        }
+//
+//        // Printing the dialogues
+//        for (String dialogue : dialogueList) {
+//            System.out.println(dialogue);
+//        }
+//    }
+}

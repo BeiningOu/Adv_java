@@ -3,25 +3,39 @@ package main;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class DialogueGenerator {
-    private List<String> dialogueList;
-    private int currentDialogueIndex;
+
+    public String lastQ;
+
+
 
     public DialogueGenerator() {
-        dialogueList = new ArrayList<>();
-        dialogueList.add("Dialogue 1? (yes/no)");
-        dialogueList.add("Dialogue 2? (yes/no)");
-        dialogueList.add("Dialogue 3? (yes/no)");
+        lastQ = "";
+//        dialogueList = new ArrayList<>();
+//        dialogueList.add("Dialogue 1? (yes/no)");
+//        dialogueList.add("Dialogue 2? (yes/no)");
+//        dialogueList.add("Dialogue 3? (yes/no)");
         // Add more dialogues as per your game's requirement
 
-        currentDialogueIndex = 0;
+//        currentDialogueIndex = 0;
     }
 
-    public String getNextDialogue() {
-        if (currentDialogueIndex >= 0 && currentDialogueIndex < dialogueList.size()) {
-            return dialogueList.get(currentDialogueIndex);
+    public String getNextDialogue(String input, int currentDialogueIndex) {
+
+        if (currentDialogueIndex >= 0 && currentDialogueIndex < 20) {
+
+            System.out.println("currentDialogueIndex " +  currentDialogueIndex);
+
+            lastQ = ChatGPTap.prompts(input, lastQ);
+
+            return lastQ;
         }
-        return null; // Game over, no more dialogues
+        if (currentDialogueIndex == 20) {
+            return ChatGPTapi.lastprompts(input);
+        }
+
     }
 
     public void processPlayerChoice(String choice) {
@@ -36,10 +50,17 @@ public class DialogueGenerator {
             // Handle invalid choice
         }
 
-        currentDialogueIndex++;
+//        currentDialogueIndex++;
     }
 
-    public boolean isGameEnd() {
-        return currentDialogueIndex >= dialogueList.size();
-    }
+//    public boolean isGameEnd() {
+////        return currentDialogueIndex >= dialogueList.size();
+//    }
+
+
+//    public static void main(String[] args) {
+//        getNextDialogue();
+//    }
+
+
 }
